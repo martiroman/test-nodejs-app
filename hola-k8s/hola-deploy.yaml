@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hola
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hola
+  template:
+    metadata:
+      labels:
+        app: hola
+    spec:
+      containers:
+        - name: hola
+          image: 10.250.1.101:5000/hello-world-nodejs:latest
+          ports:
+            - containerPort: 3333
+          imagePullPolicy: Always
