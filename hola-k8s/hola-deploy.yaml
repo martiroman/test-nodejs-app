@@ -8,13 +8,13 @@ spec:
     matchLabels:
       app: hola
   template:
-    annotations:
-      prometheus.io/scrape: 'true'
-      prometheus.io/path: '/metrics'
-      prometheus.io/port: '3333'
     metadata:
       labels:
         app: hola
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/path: '/metrics'
+        prometheus.io/port: '3333'
     spec:
       containers:
         - name: hola
