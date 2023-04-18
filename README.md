@@ -1,5 +1,14 @@
 # test-nodejs-app
 
+## Crear docker
+
+```
+docker build -t hello-world-nodejs:latest .
+docker tag hello-world-nodejs localhost:5000/hello-world-nodejs
+docker push localhost:5000/mitienda --tls-verify=false
+```
+
+
 ## Prometheus: Prom-Client
 
 ```
