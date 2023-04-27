@@ -12,8 +12,7 @@ spec:
       labels:
         app: hola
         app.kubernetes.io/name: hola
-        #app.kubernetes.io/instance: "{{ .Values.keptn.service }}"
-        app.kubernetes.io/component: api
+        app.kubernetes.io/component: service
         app.kubernetes.io/part-of: holaweb
         app.kubernetes.io/version: {{ (split ":" .Values.image)._1 | default "latest" }}
       annotations:
@@ -27,14 +26,5 @@ spec:
           ports:
             - containerPort: 3333
           imagePullPolicy: Always
-          env:
-          - name: "DT_RELEASE_VERSION"
-            valueFrom:
-              fieldRef:
-                fieldPath: metadata.labels['app.kubernetes.io/version']
-          - name: "DT_RELEASE_PRODUCT"
-            valueFrom:
-              fieldRef:
-                fieldPath: metadata.labels['app.kubernetes.io/part-of']
       imagePullSecrets:
       - name: regcred
