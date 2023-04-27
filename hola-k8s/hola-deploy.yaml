@@ -12,7 +12,7 @@ spec:
       labels:
         app: hola
         app.kubernetes.io/name: hola
-        app.kubernetes.io/instance: "{{ .Values.keptn.service }}"
+        #app.kubernetes.io/instance: "{{ .Values.keptn.service }}"
         app.kubernetes.io/component: api
         app.kubernetes.io/part-of: holaweb
         app.kubernetes.io/version: {{ (split ":" .Values.image)._1 | default "latest" }}
