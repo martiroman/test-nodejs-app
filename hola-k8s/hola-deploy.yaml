@@ -25,6 +25,15 @@ spec:
           image: mnroman/hello-world-nodejs:0.0.1
           ports:
             - containerPort: 3333
+          env:
+          - name: "DT_RELEASE_VERSION"
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.labels['app.kubernetes.io/version']
+          - name: "DT_RELEASE_PRODUCT"
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.labels['app.kubernetes.io/part-of']
           imagePullPolicy: Always
       imagePullSecrets:
       - name: regcred
