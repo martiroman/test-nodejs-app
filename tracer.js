@@ -19,7 +19,7 @@ const exporter = new CollectorTraceExporter({});
 
 const provider = new BasicTracerProvider({
 	resource: new Resource({
-		[SemanticResourceAttributes.SERVICE_NAME]: "service-a",
+		[SemanticResourceAttributes.SERVICE_NAME]: "ServicioLogin",
 	}),
 });
 provider.addSpanProcessor(new SimpleSpanProcessor(exporter));
