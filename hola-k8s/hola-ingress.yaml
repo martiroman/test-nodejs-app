@@ -19,7 +19,7 @@ spec:
               number: 10257
         path: /metrics
         pathType: Prefix
-      - aplicacion:
+      - backend:
           service:
             name: hola
             port:
