@@ -19,6 +19,13 @@ spec:
               number: 10257
         path: /metrics
         pathType: Prefix
+      - aplicacion:
+          service:
+            name: hola
+            port:
+              number: 3333
+        path: /
+        pathType: Prefix
 status:
   loadBalancer:
     ingress:
