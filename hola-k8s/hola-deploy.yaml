@@ -15,6 +15,7 @@ spec:
         app.kubernetes.io/component: service
         app.kubernetes.io/part-of: holaweb
         app.kubernetes.io/version: 0.0.4
+        app.kubernetes.io/build-version: 1
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
@@ -36,6 +37,11 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.labels['app.kubernetes.io/part-of']
+          - name: "DT_BUILD_VERSION"
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.labels['app.kubernetes.io/build-version']
+
           imagePullPolicy: Always
       imagePullSecrets:
       - name: regcred
