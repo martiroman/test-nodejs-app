@@ -14,7 +14,7 @@ spec:
         app.kubernetes.io/name: hola
         app.kubernetes.io/component: service
         app.kubernetes.io/part-of: holaweb
-        app.kubernetes.io/version: 0.0.3
+        app.kubernetes.io/version: 0.0.4
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
