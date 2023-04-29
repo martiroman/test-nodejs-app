@@ -20,7 +20,7 @@ spec:
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
         prometheus.io/port: '3333'
-        sidecar.opentelemetry.io/inject: "true" 
+        #sidecar.opentelemetry.io/inject: "true" 
     spec:
       containers:
         - name: hola
