@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: hola
   labels:
-    app: hola
+    app.kubernetes.io/app: hola
 spec:
   selector:
     app: hola
