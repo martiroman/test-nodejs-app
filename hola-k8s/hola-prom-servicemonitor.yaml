@@ -13,4 +13,4 @@ spec:
     matchNames:
     - hola-app
   endpoints:
-  - port: metrics
+  - port: 3333
