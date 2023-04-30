@@ -11,6 +11,6 @@ spec:
       app.kubernetes.io/name: hola
   namespaceSelector:
     matchNames:
-    - argocd
+    - hola-app
   endpoints:
   - port: metrics
