@@ -8,9 +8,9 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: hola
+      app.kubernetes.io/instance: hola-app
   namespaceSelector:
     matchNames:
     - hola-app
   endpoints:
-  - port: '3333'
+  - port: '80'
