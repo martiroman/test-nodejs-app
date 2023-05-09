@@ -17,6 +17,7 @@ spec:
         app.kubernetes.io/version: 0.0.4
         app.kubernetes.io/build-version: "1"
       #annotations:
+      #REVISAR
         #prometheus.io/scrape: 'true'
         #prometheus.io/path: '/metrics'
         #prometheus.io/port: '3333'
