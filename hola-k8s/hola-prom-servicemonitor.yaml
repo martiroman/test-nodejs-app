@@ -2,9 +2,9 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: holaweb-metrics
-  namespace: prometheus
+  namespace: hola-app
   labels:
-    release: pc
+    release: prometheus
 spec:
   selector:
     matchLabels:
