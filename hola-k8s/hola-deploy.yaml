@@ -22,13 +22,13 @@ spec:
         metrics.dynatrace.com/port: '3333'
         metrics.dynatrace.com/secure: 'false'
         metrics.dynatrace.com/filter: |
-        {
-          "mode": "include",
-          "names": [
-            "holaapp_number_of_hit_total*",
-            "holaapp_process_heap_bytes"
-            ]
-        }
+          {
+            "mode": "include",
+            "names": [
+                "holaapp_number_of_hit_total*",
+                "holaapp_process_heap_bytes"
+                ]
+          }
     spec:
       containers:
         - name: hola
