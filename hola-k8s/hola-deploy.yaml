@@ -16,12 +16,11 @@ spec:
         app.kubernetes.io/part-of: holaweb
         app.kubernetes.io/version: 0.0.4
         app.kubernetes.io/build-version: "2"
-      #annotations:
-      #REVISAR
-        #prometheus.io/scrape: 'true'
-        #prometheus.io/path: '/metrics'
-        #prometheus.io/port: '3333'
-        #sidecar.opentelemetry.io/inject: "true" 
+      annotations:
+        metrics.dynatrace.com/scrape: 'true'
+        metrics.dynatrace.com/path: '/metrics'
+        metrics.dynatrace.com/port: '80'
+        metrics.dynatrace.com/secure: 'false'
     spec:
       containers:
         - name: hola
