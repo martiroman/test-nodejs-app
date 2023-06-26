@@ -19,7 +19,7 @@ spec:
       annotations:
         metrics.dynatrace.com/scrape: 'true'
         metrics.dynatrace.com/path: '/metrics'
-        metrics.dynatrace.com/port: '80'
+        metrics.dynatrace.com/port: '3333'
         metrics.dynatrace.com/secure: 'false'
     spec:
       containers:
